@@ -5,6 +5,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class Distance {
 
@@ -42,11 +46,30 @@ public class Distance {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(10, 44, 414, 131);
-		frame.getContentPane().add(panel);
-		
 		JLabel lblDistanceBetweenCity = new JLabel("DISTANCE BETWEEN CITY");
-		panel.add(lblDistanceBetweenCity);
+		lblDistanceBetweenCity.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblDistanceBetweenCity.setBounds(84, 31, 284, 26);
+		frame.getContentPane().add(lblDistanceBetweenCity);
+		
+		JButton btnEnterDistance = new JButton("Enter Distance");
+		btnEnterDistance.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				EnterDistance frameEnter = new EnterDistance();
+				frameEnter.frame.setVisible(true);
+			}
+		});
+		btnEnterDistance.setBounds(28, 117, 158, 23);
+		frame.getContentPane().add(btnEnterDistance);
+		
+		JButton btnNewButton = new JButton("Find Distance");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FindDistance fd = new FindDistance();
+				fd.frame.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(224, 117, 158, 23);
+		frame.getContentPane().add(btnNewButton);
 	}
 }

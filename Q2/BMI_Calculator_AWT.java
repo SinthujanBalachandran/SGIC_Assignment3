@@ -15,7 +15,8 @@ public class BMI_Calculator_AWT extends Frame {
 	public BMI_Calculator_AWT() {
 		Frame main = new Frame("BMI Calculator");
 		lHeadding = new Label("BMI CALCULATOR");
-		lHeadding.setBounds(200, 50, 200, 20);
+		lHeadding.setFont(new Font("Lucida",Font.PLAIN,24));
+		lHeadding.setBounds(200, 50, 250, 20);
 
 		lHeight = new Label("Height (m) :");
 		lHeight.setBounds(50, 100, 100, 20);
