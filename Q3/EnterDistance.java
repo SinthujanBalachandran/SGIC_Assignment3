@@ -172,11 +172,9 @@ public class EnterDistance {
 				String c2c=textPanec2c.getText();
 				
 				
-				ArrayList distances=new ArrayList();//creating old non-generic arraylist 
 				
-				distances.add(j2j);
 				
-//				 distances [][] = {{j2j,j2k,j2v,j2c},{k2j,k2k,k2v,k2c},{v2j,v2k,v2v,v2c},{c2j,c2k,c2v,c2c}};
+			String distances [][] = {{j2j,j2k,j2v,j2c},{k2j,k2k,k2v,k2c},{v2j,v2k,v2v,v2c},{c2j,c2k,c2v,c2c}};
 				
 			}
 		
